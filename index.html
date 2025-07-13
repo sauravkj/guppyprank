@@ -10,7 +10,8 @@
   position: absolute;
   top: 200px;
   width: 300px;
-  height: 400px;
+  left: 90px;
+  height: 200px;
   background-color: white;
   animation: mymove 8s;
 }
@@ -18,7 +19,7 @@
 #DIV2 {
   position: absolute;
   top: 200px;
-  left: 30px;
+  left: 90px;
   width: 300px;
   height: 150px;
  
@@ -29,17 +30,23 @@ h1 {
     font-family:verdana";
 }
 
-
 #button {
   background-color: #04AA6D;
   border: none;
   color: white;
   padding: 15px 32px;
+  top:300px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 400px 80px;
   cursor: pointer;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
 }
 
 @keyframes mymove {
@@ -51,9 +58,15 @@ h1 {
 
 <script>
     function myFunction() {
-      alert("Congrats!Ni mandan aanen veendum theliyichu");
+
+      alert("Congrats! Ni mandan aanen veendum theliyichu");
+       var x = document.getElementById("myAudio"); 
+       x.play();
+
     }
-    </script>
+ 
+
+</script>
 <body>
 
 <div id="DIV2">
@@ -63,6 +76,10 @@ h1 {
 <div id="myDIV">
     <h1>ITH SCAN CHEYTHAVAN MANDAN</h1>
 </div>
+<audio id="myAudio">
+  <source src="tone.mp3" type="audio/mpeg">
+  
+</audio>
 
 <button div id="button" onclick="myFunction()">Click here</button>
 </body>
